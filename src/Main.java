@@ -16,7 +16,6 @@ public class Main {
         String name = names[rand.nextInt(5)];
         bartender(name);
         sum(input1, input2);
-
     }
     public static void helloWorld(){
         System.out.println("Hello, world!");
