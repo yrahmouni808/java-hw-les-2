@@ -4,14 +4,18 @@ public class Main {
     public Main(){
     }
     public static void main(String[] args) {
+        helloWorld();
         Random rand = new Random();
-        int number = rand.nextInt(10) + 1;
+        int number = rand.nextInt(11) - 5;
+        int num = rand.nextInt(3) - 1;
+        positiveOrNegative(number);
+        positiveOrZeroOrNegative(num);
         int input1 = rand.nextInt(10) + 1;
         int input2 = rand.nextInt(10) + 1;
-        String[] hi = {"Younes", "Henk", "Frank", "George", "Abdel"};
-        System.out.println(hi[rand.nextInt(5)]);
+        String[] names = {"Younes", "Henk", "Frank", "George", "Abdel"};
+        String name = names[rand.nextInt(5)];
+        bartender(name);
         sum(input1, input2);
-        String name;
 
     }
     public static void helloWorld(){
@@ -34,13 +38,20 @@ public class Main {
         }
     }
     public static void bartender(String name){
-        Random rand = new Random();
-        int a  = rand.nextInt() + 10;
         switch (name){
             case "Younes":
-                System.out.println("Oh, jij drinkt niet.\nHier is wat water!");
+                System.out.println("Oh, you don't drink.\nHere's a cup of water!");
+                break;
+            case "Henk":
+                System.out.println("Henk wants a Bacardi cola.");
+                break;
+            case "Frank":
+                System.out.println("You don't get anything after the mess you made last time.\nGet out!");
+                break;
+            default:
+                System.out.println(name + ", pour yourself something I rly dont care");
+                break;
         }
-
     }
     public static void sum(int a, int b){
         StringBuilder str = new StringBuilder("A = ");
