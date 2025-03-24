@@ -4,7 +4,7 @@ public class Loops {
     public Loops(){}
 
     public static void main(String[] args) {
-        fibonacci(10);
+        starTree(4);
     }
     public static int evenTill100(){
         int sum = 0;
@@ -101,22 +101,24 @@ public class Loops {
             }
         }
     }
-//    public static void starTree(int n){
-//        StringBuilder str = new StringBuilder();
-//        if(n > 0){
-//            int i = 1;
-//            while(i <= n){
-//                int j = 0;
-//                while(j < n * 2){
-//                    if(){
-//
-//                    }else{
-//                        str.append(" ");
-//                    }
-//                    j++;
-//                }
-//                i++;
-//            }
-//        }
-//    }
+    public static void starTree(int n){
+        StringBuffer str = new StringBuffer();
+        if(n > 0){
+            int i = 1;
+            while(i <= n){
+                int j = 0;
+                while(j < n * 2 + 1){
+                    if((j < n- i)||(j > n+i)){
+                        str.append("a");
+                    }else{
+                        str.append("*");
+                    }
+                    j++;
+                }
+                str.append("\n");
+                i++;
+            }
+        }
+        System.out.println(str);
+    }
 }
